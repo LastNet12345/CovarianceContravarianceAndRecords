@@ -22,19 +22,19 @@
         private static void ArrayExample()
         {
             //1.
-            Employee[] employees = new Admin[] { new Admin(), new Admin(), new Admin(), new Admin() };
-            employees[0] = new Employee();
+            //Employee[] employees = new Admin[] { new Admin(), new Admin(), new Admin(), new Admin() };
+            //employees[0] = new Manager();
 
-            foreach (var item in employees)
-            {
-                Console.WriteLine(item);
-            } 
+            //foreach (var item in employees)
+            //{
+            //    Console.WriteLine(item);
+            //} 
             
             //4.
             IEnumerable<Employee> employees2 = new Admin[] { new Admin(), new Admin(), new Admin(), new Admin() };
-            employees[0] = new Employee();
+           // employees2[0] = new Employee();
 
-            foreach (var item in employees)
+            foreach (var item in employees2)
             {
                 Console.WriteLine(item);
             }
