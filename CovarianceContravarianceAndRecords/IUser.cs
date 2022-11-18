@@ -9,6 +9,7 @@ namespace CovarianceContravarianceAndRecords;
 internal interface IUser<out T>
 {
     public T Get(int id);
+    //public void Add(T user);
 }
 
 internal class SuperUser<T> : IUser<T>

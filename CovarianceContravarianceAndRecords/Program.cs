@@ -8,20 +8,32 @@ internal class Program
         ArrayExample();
         ListExample();
         OwnImplementation();
+
+        //Contravariance
+        OwnImplementationContravariance();
+
+    }
+
+    private static void OwnImplementationContravariance()
+    {
+        //6.
+       // Animal<Hawk> animal = new Animal<Bird>();
+       
+        IAnimal<Hawk> animal = new Animal<Bird>();
     }
 
     private static void OwnImplementation()
     {
         //5.
-       // SuperUser<Employee> superUser = new SuperUser<Admin>();
-        
+        // SuperUser<Employee> superUser = new SuperUser<Admin>();
+
         IUser<Employee> superUser = new SuperUser<Admin>();
     }
 
     private static void ListExample()
     {
         //2.
-       // List<Employee> list = new List<Admin>();
+        // List<Employee> list = new List<Admin>();
         //list.Add(new Manager());
 
         //3.
@@ -38,10 +50,10 @@ internal class Program
         //{
         //    Console.WriteLine(item);
         //} 
-        
+
         //4.
         IEnumerable<Employee> employees2 = new Admin[] { new Admin(), new Admin(), new Admin(), new Admin() };
-       // employees2[0] = new Employee();
+        // employees2[0] = new Employee();
 
         foreach (var item in employees2)
         {
