@@ -4,15 +4,47 @@ internal class Program
 {
     static void Main(string[] args)
     {
+        
         //Covariance
-        ArrayExample();
-        ListExample();
-        OwnImplementation();
+        //ArrayExample();
+        //ListExample();
+        //OwnImplementation();
 
-        //Contravariance
-        OwnImplementationContravariance();
-        IComparerExample();
+        ////Contravariance
+        //OwnImplementationContravariance();
+        //IComparerExample();
 
+        //Records
+        RecordsExamle();
+
+        Console.ReadLine();
+
+       
+
+    }
+
+    private static void RecordsExamle()
+    {
+        EmployeeClass em = new EmployeeClass("Nisse", 56);
+        var (name, age) = em;
+
+        var employeeRecord = new EmployeeRecord("Kalle", 23);
+        //employeeRecord.Age = 45;
+
+        var newEmp = employeeRecord with { Age = 45 };
+
+
+
+        Console.WriteLine(employeeRecord);
+
+        //var (name, age) = employeeRecord;
+
+        Console.WriteLine(name);
+
+        //Shallow imutability
+        var empRec = new EmpRec<EmployeeClass>(new List<EmployeeClass> { new EmployeeClass("Nisse", 56) });
+       // empRec.Users = new List<EmployeeClass>();   
+        empRec.Users[0] = new EmployeeClass("Anna", 56);
     }
 
     private static void IComparerExample()
