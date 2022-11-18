@@ -11,7 +11,13 @@ internal class Program
 
         //Contravariance
         OwnImplementationContravariance();
+        IComparerExample();
 
+    }
+
+    private static void IComparerExample()
+    {
+        IComparer<Hawk> comparer = new TestComparer<Bird>();
     }
 
     private static void OwnImplementationContravariance()

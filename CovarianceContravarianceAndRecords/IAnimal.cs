@@ -19,7 +19,10 @@ namespace CovarianceContravarianceAndRecords
         }
     }
 
-    public class Bird { }
+    public class Bird
+    {
+       
+    }
     public class Hawk : Bird { }
     public class Flamingo : Bird { }
 
